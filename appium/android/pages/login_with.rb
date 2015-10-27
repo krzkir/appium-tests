@@ -25,13 +25,10 @@ module Endomondo
       end
 
       def assert_no_fb_app
-      #  @error_msg = find_element(:xpath,"//*[@id='message']") #and @text='To complete this action, you need to install the Facebook app.'
-       # @error_msg = find_element(:id,'message')
          @error_message = text_exact("To complete this action, you need to install the Facebook app.")
       end
 
       def assert_google_error
-      #  @error_msg = find_element(:xpath,"//*[@id='message']") #and @text='To complete this action, you need to install the Facebook app.'
         @error_msg = text_exact("Google+ authentication failed.")
       end
 
