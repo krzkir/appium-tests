@@ -1,0 +1,14 @@
+[caps]
+appium-version = "1.1.0"
+platformName = "Android"
+platformVersion = "5.0"
+deviceName = "Android"
+app = "./endomondo.apk"
+name = "Ruby Android Tutorial"
+newCommandTimeout = "600"
+
+[appium_lib]
+debug = true
+wait = 30
+export_session = true
+require = ["./appium/android/pages", "./appium/android/common.rb"]
