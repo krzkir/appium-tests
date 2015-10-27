@@ -53,12 +53,14 @@ describe 'I can manually add workout data' do
     select_sport_page.click_fencing
     add_workout_page.click_duration
     workout_duration_page.assert
-    workout_duration_page.set_hours
-    workout_duration_page.set_minutes
+    workout_duration_page.set_hours(2)
+    workout_duration_page.set_minutes(3)
+    workout_duration_page.set_seconds(4)
     workout_duration_page.click_done
     add_workout_page.click_distance
     workout_distance_page.assert
-    workout_distance_page.set_major
+    workout_distance_page.set_major(3)
+    workout_distance_page.set_minor(3)
     workout_distance_page.click_done
     add_workout_page.click_save
     workout_summary_page.assert

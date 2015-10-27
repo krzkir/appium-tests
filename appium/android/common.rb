@@ -20,5 +20,13 @@ def login
     login_with_page.click_login_with_email
     login_with_email_page.fill_form("testmail@te.st", "endomondo")
     login_with_email_page.click_login
-	
 end
+
+def swipe_element(element, offset, duration)
+	sleep 1
+	start_x = element.location.x+50
+	start_y = element.location.y+50
+	end_x = start_x 
+	end_y = start_y-offset
+	swipe({'duration': duration, 'start_x': start_x, 'start_y': start_y, 'end_x': end_x, 'end_y': end_y})
+end  
