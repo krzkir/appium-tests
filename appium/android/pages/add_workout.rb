@@ -32,7 +32,6 @@ module Endomondo
 
       def click_save
         wait {@save.click}
-        
       end
       
     end

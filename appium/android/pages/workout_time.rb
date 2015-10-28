@@ -1,12 +1,8 @@
 module Endomondo
-  module WorkoutDatePage
+  module WorkoutTimePage
     class << self
       
       def assert_exists
-        @oct01=find_element(:xpath,"//*[@class='android.view.View'and @content-desc='01 October 2015']")
-        @day = find_element(:id,"date_picker_day")
-        @month = find_element(:id,"date_picker_month")
-        @year = find_element(:id,"date_picker_year")
         @done = find_element(:id,"button1")
       end
 
@@ -27,7 +23,7 @@ module Endomondo
 end
 
 module Kernel
-  def workout_date_page
-    Endomondo::WorkoutDatePage
+  def workout_time_page
+    Endomondo::WorkoutTimePage
   end
 end
